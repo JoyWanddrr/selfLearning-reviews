@@ -21,7 +21,7 @@
           else {
             Url.create({ originalUrl: inputUrl, shortUrl: shortener(5) })
               .then((urlData) =>
-                res.render('index', { shortUrl: urlData.shortUrl, inputUrl, hostUrl }))
+              res.render('index', { shortUrl: urlData.shortUrl, inputUrl, hostUrl }))
           }
         })
         .catch(err => console.log(err))
@@ -61,10 +61,10 @@
           else {
             Url.create({ originalUrl: inputUrl, shortUrl: shortener(5) })
               .then((urlData) =>
-                res.render('renew', { shortUrl: urlData.shortUrl, inputUrl, hostUrl }))
+              res.render('renew', { shortUrl: urlData.shortUrl, inputUrl, hostUrl }))
           }
         })
-        .then((urlData)=>res.render('/')) //程式碼B
+        _.then((urlData)=>res.render('/')) //程式碼B_
         .catch(err => console.log(err))
       })
     
